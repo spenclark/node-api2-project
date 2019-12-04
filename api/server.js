@@ -1,13 +1,11 @@
-const express = require('express');
+const express = require(`express`);
 
-const postRouter = require('../posts/router');
+const postRouter = require(`../posts/router`);
 
 const server = express();
 
-server.get('/', (req, res) => {
-    res.send('<h2> POST API <H2>')
-})
+server.get(`/`, (req, res) => res.send(`<h2>Posts API</h2>`));
 
-server.use('/api/posts', postRouter);
+server.use(`/api/posts`, postRouter);
 
 module.exports = server;
